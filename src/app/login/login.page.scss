@@ -1,9 +1,54 @@
-ion-item{
-    --background: #3880ff;
-    --color: #fff;
+$white-color: #fff;
+$height100: 100%;
+
+ion-grid {
+    width: 100%;
+    height: $height100;
+    background: #dfdfdf;
 }
 
-ion-button{
-    --background: #062f77;
+ion-row {
+    height: $height100;
 }
 
+ion-col {
+    border: 1px solid #488aff;
+    background: $white-color;
+}
+
+.btn-block {
+    button {
+        font-weight: 300;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        background-color: #DF176D;
+        padding: 10px 0 10px 0;;
+        width: 100%;
+        border-radius: 5px;
+        outline: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+.forgot-block {
+    text-align: center;
+    p {
+        font-size: 12px;
+        color: #DF176D;
+        text-transform: uppercase;
+        font-family: 'Open+Sans', sans-serif;
+        line-height: 18px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        background: $white-color;
+    }
+
+    ion-col {
+        border: none;
+    }
+}

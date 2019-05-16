@@ -1,0 +1,39 @@
+ion-img {
+    width: 20px;
+    color: #ffffff
+}
+
+.product-block {
+    background-color: #ececec;
+
+    .title {
+        background-color: #ffffff;
+        h3 {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 24px;
+            color: #6d6868;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 24px;
+        }
+    }
+}
+
+.product-col {
+    margin-bottom: -4px;
+    .product-grid {
+        height: 100%;
+        margin: 0 0 -0 -3px;
+        padding: 0;
+        cursor: pointer;
+        img {
+            min-height: 35vh;
+            width: 100%;
+            height: 120px;
+        }
+    }
+}
+ion-button {
+    --background: #df176d;
+}

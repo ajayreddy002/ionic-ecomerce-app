@@ -1,0 +1,53 @@
+.menu-block {
+    ion-list {
+        ion-menu-toggle {
+            ion-item {
+                .item-inner {
+                    border: none;
+                }
+
+                font-size: 12px;
+                color: #000000
+            }
+        }
+    }
+}
+
+.main-menu {
+    height: 150px;
+    max-width: 100%;
+    --background: #DF176D;
+    position: relative;
+    ion-img {
+        height: 100px;
+        max-height: 150px;
+    }
+    ion-title {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        text-align: center
+    }
+    .logo-text {
+        margin: 10px auto;
+        text-align: center;
+        img {
+            max-height: 100%;
+            max-width: 150px;
+            border-radius: 50%;
+            width: 80px;
+        }
+        h1 {
+            font-family: 'Abril Fatface', cursive;
+            font-size: 28px;
+            font-weight: 400;
+            color: rgba(220, 20, 125, 1);
+        }
+    }
+}
+
+ion-header {
+    --background-color: #DF176D;
+}

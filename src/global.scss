@@ -10,8 +10,18 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Open+Sans:400,600,600i,700,700i,800|Roboto:400,500,700,700i');
-
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 body {
     margin: 0;
     padding: 0;
+}
+ion-toolbar {
+    --background:  #DF176D;
+}
+ion-menu-button {
+    color: #ffffff;
+}
+ion-title {
+    color: #ffffff;
+    text-align: center;
 }

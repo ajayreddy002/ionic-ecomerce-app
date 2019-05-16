@@ -1,13 +1,16 @@
 <ion-app>
   <ion-split-pane>
-    <ion-menu>
+    <ion-menu type="push">
       <ion-header>
-        <ion-toolbar >
-          <ion-title>Menu</ion-title>
+        <ion-toolbar class="main-menu">
+          <div class="logo-text">
+            <img src="../assets/logo/logo2.svg" alt="">
+          </div>
+          <ion-title>User</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <ion-list>
+      <ion-content class="menu-block">
+        <ion-list  lines="none">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>

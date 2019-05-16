@@ -1,26 +1,76 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <!-- <ion-icon name="arrow-back"></ion-icon> -->
+      <ion-img src="../../assets/icon/left-arrow.svg"></ion-img>
+      <span style=" color: #fff" routerLink="/home">Back</span>
     </ion-buttons>
     <ion-title>
       Products
+      <ion-icon class="cart-icon" name="cart"></ion-icon>
+      <!-- <ion-icon class="cart-icon" name="search"></ion-icon> -->
+      <ion-img class="filter-img" src="../../assets/icon/filter.svg"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid class="main-block">
+  <div class="search-bar">
+    <ion-searchbar animated autocomplete type="text"></ion-searchbar>
+  </div>
+  <ion-grid class="product-block">
+    <div class="title">
+      <h3>Categories</h3>
+    </div>
+    <ion-item lines="none">
+      <ion-label (click)="openSubMenu()">
+        Item
+        <ion-icon name="arrow-round-forward" *ngIf="!isSubmenu" style="float: right"></ion-icon>
+        <ion-icon name="arrow-round-down" *ngIf="isSubmenu" style="float: right"></ion-icon>
+        <ion-list class="product-list" [ngClass]="{'show': isSubmenu}">
+          <ion-list>
+            <ion-item>
+              <ion-label>Sub1 </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sub1</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sub1</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sub1</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sub1</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-list>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>
+        Item
+        <ion-icon name="arrow-round-forward" style="float: right"></ion-icon>
+      </ion-label>
+    </ion-item>
     <ion-row>
-      <ion-col size="4">
-        <img src="../../assets/products/photo-1546367564-ade1880f8921.jpg" alt="">
+      <ion-col size="6" *ngFor="let item of productCategories">
+        <ion-card class="product-grid" (click)="navigateToCategory(item)">
+          <img [src]="item.imgSrc" alt="">
+          <div class="product-category">
+            <h4>{{item.title}}</h4>
+          </div>
+        </ion-card>
       </ion-col>
-      <ion-col size="4">
-        <img src="../../assets/products/photo-1546367564-ade1880f8921.jpg" alt="">
-      </ion-col>
-      <ion-col size="4">
-        <img src="../../assets/products/photo-1546367564-ade1880f8921.jpg" alt="">
-      </ion-col>
+      <!-- <ion-col size="6">
+        <ion-card class="product-grid">
+          <img src="../../assets/products/cosmotic.jpg" alt="">
+          <div class="product-category">
+            <h4>Beauty</h4>
+          </div>
+        </ion-card>
+      </ion-col> -->
     </ion-row>
   </ion-grid>
 </ion-content>

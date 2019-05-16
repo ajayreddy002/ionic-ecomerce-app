@@ -23,6 +23,14 @@ export class HomePage {
     {imgSrc: '/assets/products/pro1.jpg', tag: 'Denim jacket blue', id: 1, mrp: 'Rs.250'},
     {imgSrc: '/assets/products/pro2.jpg', tag: 'Coach slim easton black', id: 1, mrp: 'Rs.250'}
   ];
+  categories = [
+    {imgSrc: '/assets/products/school2.jpg', tag: 'School Kit', id: 1},
+    {imgSrc: '/assets/products/cosmotic.jpg', tag: 'Cosmotics', id: 1},
+    {imgSrc: '/assets/products/cloth1.jpg', tag: 'Clothing', id: 1},
+    {imgSrc: '/assets/products/backpack1.jpg', tag: 'Back packs', id: 1},
+    {imgSrc: '/assets/products/groceries1.jpg', tag: 'groceries', id: 1},
+    {imgSrc: '/assets/products/cap1.jpg', tag: 'Caps', id: 1},
+  ];
   slideOpts = {
     initialSlide: 1,
     speed: 400,

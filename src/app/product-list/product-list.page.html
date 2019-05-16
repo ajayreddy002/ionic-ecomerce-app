@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-icon name="arrow-back"></ion-icon> -->
+      <ion-img src="../../assets/icon/left-arrow.svg"></ion-img>
+      <span style=" color: #fff" routerLink="/products">Back</span>
+    </ion-buttons>
+    <ion-title>product-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search-bar">
+    <ion-searchbar animated autocomplete type="text"></ion-searchbar>
+  </div>
+  <ion-grid class="product-block">
+    <div>
+      <ion-chip>
+        <ion-label>Water proof</ion-label>
+        <!-- <ion-icon name="close-circle"></ion-icon> -->
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Laptop</ion-label>
+        <!-- <ion-icon name="close-circle"></ion-icon> -->
+      </ion-chip>
+      <ion-chip>
+        <ion-label>Leather</ion-label>
+        <!-- <ion-icon name="close-circle"></ion-icon> -->
+      </ion-chip>
+    </div>
+    <div class="title" padding>
+      <h3>{{productTitle}}</h3>
+    </div>
+    <ion-row>
+      <ion-col size="6" class="product-col" *ngFor="let item of products">
+        <ion-card class="product-grid" (click)="openProductDetail(item)">
+          <img [src]="item.imgSrc" alt="">
+          <ion-card-subtitle>{{item.barnd}}</ion-card-subtitle>
+          <ion-card-content no-padding>
+            <ion-row>
+              <ion-col size="6">
+                <p>{{item.mrp}}</p>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button size="small">Add</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
