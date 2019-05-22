@@ -1,7 +1,7 @@
 # This is an app for who want to build an ecomerce in mobile 
 # Steps to get project and run
 1. Git clone
-2. Eun npm install
+2. Run npm install
 3. And run ionic serve -l
 # Steps for generating APK
 1. Install Android studio 
