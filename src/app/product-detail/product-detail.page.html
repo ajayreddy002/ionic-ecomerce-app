@@ -1,17 +1,35 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-icon name="arrow-back"></ion-icon> -->
       <ion-img src="../../assets/icon/left-arrow.svg"></ion-img>
       <span style=" color: #fff" routerLink="/products">Back</span>
+    </ion-buttons>
     <ion-title>product-detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content overflow-scroll="true">
   <ion-grid>
     <div class="product-block">
       <div class="img-block">
-        <img [src]="imgSrc" alt="">
+        <!-- <img [src]="imgSrc" alt=""> -->
+        <ion-slides [options]="slideOpts" effect='slide' initialSlide='0' (ionSlideDidChange)="slideChanged($event)">
+          <ion-slide *ngFor="let related of relatedImages">
+            <img [src]="related.imgSrc">
+          </ion-slide>
+        </ion-slides>
+        <div class="wishlit-icon">
+          <!-- <ion-icon name="heart-empty"></ion-icon> -->
+          <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="addToWishList()">
+              <ion-fab-button [ngClass]="{'heart': isHeartFull}" size="small">
+                <ion-icon *ngIf="!isHeartFull" name="heart-empty"></ion-icon>
+                <ion-icon  *ngIf="isHeartFull" name="heart"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+        </div>
       </div>
+      <p text-center>{{page | number}} of {{relatedImages?.length}}</p>
       <div class="product-content">
         <h2>{{title}}</h2>
         <p>{{price}}</p>
@@ -23,20 +41,30 @@
           interdum scelerisque eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
           mus.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est libero, convallis porttitor nisl ut,
+          interdum scelerisque eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+          mus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est libero, convallis porttitor nisl ut,
+          interdum scelerisque eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+          mus.
+        </p>
       </div>
     </div>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button>
-          <ion-label>Add to Wish List</ion-label>
-          <ion-icon name="heart-empty"></ion-icon>
-          <!-- <ion-badge>6</ion-badge> -->
-        </ion-tab-button>
-        <ion-tab-button>
-          <ion-label>Add to Cart</ion-label>
-          <ion-icon name="cart"></ion-icon>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
   </ion-grid>
 </ion-content>
+<div class="tabs">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button>
+        <ion-label>Buy Now</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+      <ion-tab-button (click)="addToCart()">
+        <ion-label>Add to Cart</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

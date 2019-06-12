@@ -99,3 +99,11 @@
         line-height: 18px;
     }
 }
+ion-badge {
+    position: absolute;
+    top: -15px;
+    left: auto;
+    right: 8px;
+    bottom: 19px;
+    --background: transparent;
+}

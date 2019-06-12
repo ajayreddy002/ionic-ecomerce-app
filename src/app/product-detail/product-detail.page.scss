@@ -16,7 +16,7 @@ ion-tab-button {
         }
 
         ion-icon {
-            color: #ffffff
+            color: #ffffff;
         }
     }
 
@@ -63,4 +63,12 @@ ion-tab-button {
                     text-align: justify;
                 }
             }
+}
+.tabs {
+    position: relative;
+    height: 55px;
+}
+.heart {
+    transition: 0.35s all ease-in-out;
+    --background: #df176d;
 }
