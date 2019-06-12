@@ -21,7 +21,10 @@ After downloading JAVA_SDK make sure set the path in Environment Variable.
 
 If you face any difficulty in the app please feel free to create an issue. I Am happy to help you.
 
-If you need dashborad for ecomerce platform in angular please visit my page in github.
+If you need admin dashborad for ecomerce in angular please visit my page in github.
+
+If You need apis for backend please visit vmartbackend repository in my page of github.
+for live url of my admin dashboard please click on this link https://vmartadmindashboard.herokuapp.com
 
 
 Thank you.....
